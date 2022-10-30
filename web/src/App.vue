@@ -18,8 +18,8 @@ export default {
     //   url: "http://localhost:3000/user/account/token/",
     //   type: "post",
     //   data: {
-    //     username: "lsh",
-    //     password: "plsh",
+    //     username: "lsh3",
+    //     password: "waxycj.0819",
     //   },
     //   success(resp){
     //     console.log(resp);
@@ -32,7 +32,7 @@ export default {
     //   url: "http://localhost:3000/user/account/info/",
     //   type: "get",
     //   headers: {
-    //     Authorization: "Bearer " + "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI3Zjk4NWE4NTYxZWQ0OWY5YWQ0MzEyNjg0ZTk4NjFhYiIsInN1YiI6IjEiLCJpc3MiOiJzZyIsImlhdCI6MTY2NzAyNjc1MCwiZXhwIjoxNjY4MjM2MzUwfQ.OGuasOrtMiebpxXEpe3uK0Bj2LBxqqjcbmnwXlnDwnA",
+    //     Authorization: "Bearer " + "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiMzYyMzE5ZjQzMjA0NDczYjE3NWNkMmQ4MWQ3ODFmOSIsInN1YiI6IjUiLCJpc3MiOiJzZyIsImlhdCI6MTY2NzEyMzEyNywiZXhwIjoxNjY4MzMyNzI3fQ.ZnkAGpCTR2c5nzTA6Zcf1VTLxTE9pZG7q0u9g1j9tOI",
     //   },
     //   success(resp){
     //     console.log(resp);
@@ -45,9 +45,9 @@ export default {
     //   url: "http://localhost:3000/user/account/register/",
     //   type: "post",
     //   data: {
-    //     username: "lsh2",
-    //     password: "123",
-    //     confirmedPassword : "123",
+    //     username: "lsh4",
+    //     password: "plsh4",
+    //     confirmedPassword : "plsh4",
     //   },
     //   success(resp){
     //     console.log(resp);
