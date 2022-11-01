@@ -40,7 +40,8 @@
                                             @init="editorInit"
                                             lang="c_cpp"
                                             theme="textmate"
-                                            style="height: 300px" />
+                                            style="height: 300px"
+                                            :options="{fontSize: 15}"  />
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -92,7 +93,8 @@
                                                             @init="editorInit"
                                                             lang="c_cpp"
                                                             theme="textmate"
-                                                            style="height: 300px" />
+                                                            style="height: 300px"
+                                                            :options="{fontSize: 15}"  />
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
