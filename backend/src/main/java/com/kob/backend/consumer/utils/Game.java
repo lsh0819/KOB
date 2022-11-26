@@ -1,22 +1,33 @@
 package com.kob.backend.consumer.utils;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Game {
-    final private Integer rows;
-    final private Integer cols;
-    final private Integer inner_walls_count;
-    final private int[][] g;
+    private final Integer rows;
+    private final Integer cols;
+    private final Integer inner_walls_count;
+    private final int[][] g;
 
-    final private static int[] dx = {-1, 0, 1, 10}, dy = {0, 1, 0, -1};
+    private final static int[] dx = {-1, 0, 1, 10}, dy = {0, 1, 0, -1};
 
+    private final Player playerA, playerB;
 
-    public Game(Integer rows, Integer cols, Integer inner_walls_count){
+    public Game(Integer rows, Integer cols, Integer inner_walls_count, Integer idA, Integer idB){
         this.rows = rows;
         this.cols = cols;
         this.inner_walls_count = inner_walls_count;
         this.g = new int[rows][cols];
+        playerA = new Player(idA, rows - 2, 1, new ArrayList<>());
+        playerB = new Player(idB, 1, cols - 2, new ArrayList<>());
+    }
 
+    public Player getPlayerA() {
+        return playerA;
+    }
+
+    public Player getPlayerB() {
+        return playerB;
     }
 
     public int[][] getG(){
