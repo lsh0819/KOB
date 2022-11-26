@@ -7,6 +7,7 @@ import com.kob.backend.mapper.UserMapper;
 import com.kob.backend.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
@@ -19,12 +20,14 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @Component
 @ServerEndpoint("/websocket/{token}")  // 注意不要以'/'结尾
 public class WebSocketServer {
-    final private static ConcurrentHashMap<Integer, WebSocketServer> users = new ConcurrentHashMap<>();
+    final public static ConcurrentHashMap<Integer, WebSocketServer> users = new ConcurrentHashMap<>();
     final private static CopyOnWriteArraySet<User> matchPool = new CopyOnWriteArraySet<>();
     private User user;
     private Session session = null;
 
     private static UserMapper userMapper;
+
+    private Game game = null;
 
     @Autowired
     public void setUserMapper(UserMapper userMapper){
@@ -70,6 +73,12 @@ public class WebSocketServer {
 
             Game game = new Game(13, 14, 20, a.getId(), b.getId());
             game.createMap();
+
+            users.get(a.getId()).game = game;
+            users.get(b.getId()).game = game;
+
+            game.start();
+
 
             JSONObject respGame = new JSONObject();
             respGame.put("a_id", game.getPlayerA().getId());
