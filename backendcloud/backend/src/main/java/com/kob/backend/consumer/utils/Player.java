@@ -12,6 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 public class Player {
     private Integer id;
+    private Integer botId;  // -1表示亲自出马，否则表示用AI打
+    private String botCode;
     private Integer sx; // 起点的坐标(sx, sy)
     private Integer sy;
     private List<Integer> steps;  // 玩家每一步走的方向
