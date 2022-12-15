@@ -21,6 +21,8 @@ export default {
     setup(){
         const store = useStore();
         const socketUrl = `ws://localhost:3000/websocket/${store.state.user.token}/`;
+        
+        store.commit("updateLoser", "none");
 
         let socket = null;
         onMounted(() => {
